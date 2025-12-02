@@ -22,7 +22,8 @@ func main() {
 		w.Write([]byte(`{"message": "hearthbeat!"}`))
 	})
 
-	db, err := database.NewDatabase("database.sql")
+	// TODO: Replace by env var
+	db, err := database.NewDatabase("echook.db")
 	if err != nil {
 		panic(err)
 	}
