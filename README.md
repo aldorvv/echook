@@ -21,7 +21,6 @@ cd echook
 # Run
 go run main.go
 # Server running on :2407
-```
 
 # Send a test webhook
 curl -X POST http://localhost:2407/w/test \
