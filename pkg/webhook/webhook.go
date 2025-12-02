@@ -17,13 +17,9 @@ type WebhookInput struct {
 }
 
 type WebhookRecord struct {
-	ID        string          `json:"id"`
-	Endpoint  string          `json:"endpoint"`
-	Method    string          `json:"method"`
-	Headers   json.RawMessage `json:"headers"`
-	Body      json.RawMessage `json:"body"`
-	IP        string          `json:"ip"`
-	CreatedAt time.Time       `json:"created_at"`
+	WebhookInput
+	ID        string    `json:"id"`
+	CreatedAt time.Time `json:"created_at"`
 }
 
 func Create(db *database.Database, input *WebhookInput) error {
